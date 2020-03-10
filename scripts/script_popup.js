@@ -54,10 +54,27 @@ $('.popup__container1').click(function(event) {
     }
   });
 
-  $(function(){
-    $("#popup__txt__tel").mask("8(999) 999-9999", {
+ 
+  $("#popup__txt__tel").mask("8(999) 999-9999", {
       completed: function(){ alert("Вы ввели номер: " + this.val()); }
-    });
   });
+  
+ 
+  $('.send__form').click(function() {
+    var serializeFormData = $('#form').serialize();
+    $.ajax({
+      type: 'POST',
+      url: 'action',
+      data: serializeFormData,
+      success: function(data) {
+          console.log(data);
+      },
+      error:  function(data){
+          console.log('Внимание! произошла ошибка:' + data);
+      }
+    });
+});
+
+
 
 });

@@ -1,13 +1,13 @@
 @font-face {
 	font-family: 'Roboto Regular';
-	src: url('fonts/Roboto-Regular.woff') format('woff');
+	src: url('/fonts/Roboto-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Roboto Black';
-	src:url('fonts/Roboto-Black.woff') format('woff');
+	src:url('/fonts/Roboto-Black.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -26,6 +26,10 @@ body {
 a {
 	text-decoration: none;
 }
+
+html {
+	scroll-behavior: smooth;
+  }
 
 .container__max {
 	width: 100%;
@@ -48,7 +52,7 @@ a {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-image: url('img/bg.png');
+	background-image: url('/img/bg.png');
 	z-index: 50;
 	display: none;
 }
@@ -57,7 +61,7 @@ a {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-image: url('img/bg.png');
+	background-image: url('/img/bg.png');
 	z-index: 50;
 	display: none;
 }
@@ -237,7 +241,7 @@ a {
 		height: 27px;
 		margin-left: 20px;
 		padding:20px;
-		background-image: url('img/menu-min.png');
+		background-image: url('/img/menu-min.png');
 		background-repeat: no-repeat;
 		cursor: pointer;
 		background-color: #FFFFFF;
@@ -272,7 +276,7 @@ a {
 		height: 27px;
 		margin-left: 20px;
 		padding:20px;
-		background-image: url('img/call-min.png');
+		background-image: url('/img/call-min.png');
 		background-repeat: no-repeat;
 		cursor: pointer;
 		background-color: #FFFFFF;
@@ -511,8 +515,8 @@ a {
 	min-height: 500px;
 	flex-grow: 1;
 	background-image:
-	url('img/myphoto.png'),
-	url('img/myshadow.png'),
+	url('/img/myphoto.png'),
+	url('/img/myshadow.png'),
 	url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000px' height='727px'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient'%3E%3Cstop offset='0%25' stop-color='%23FB8A5E'/%3E%3Cstop offset='100%25' stop-color='%23FE3497'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0,651C221,24 847,24 918,475C899,1000 48,1000 0,651Z' fill='url(%23linear-gradient)'/%3E%3C/svg%3E");
 	background-repeat: no-repeat no-repeat;
 }
@@ -642,7 +646,7 @@ span {
 	box-shadow: 0 0 20px #F3F3F3;
 	border-radius: 30px;
 	cursor: pointer;
-	background-image: url('img/arrow.png');
+	background-image: url('/img/arrow.png');
 	width: 60px;
 	height: 60px;
 	border: none;
@@ -655,7 +659,7 @@ span {
    box-shadow: 0 0 20px #F3F3F3;
    border-radius: 30px;
    cursor: pointer;
-   background-image: url('img/arrow.png');
+   background-image: url('/img/arrow.png');
    width: 60px;
    height: 60px;
    border: none;
@@ -668,60 +672,72 @@ span {
 	overflow: hidden;	
 }
 
-.banner__symbol {
+.symbol6 {
 	position: absolute;
-	display: flex;
 	font-family: 'Roboto Black';
 	font-weight: 400;
 	color:white;
 	font-size: 48px;
-	justify-content: space-between;	
-}
-
-@media (max-width: 1024px) {
-	.banner__symbol {
-		display: none;
-	}
-}
-	
-.symbol6 {
-	margin-top: 40px;
-	margin-left: 120px;
+	margin-top: 2%;
+	margin-left: 2%;
 	transform: skewX(-35grad);
 	width: 70px;
-	position: absolute;
 }
 
 .symbol7 {
-	margin-top: 220px;
-	margin-left: 245px;
-	transform: skewX(-35grad);
 	position: absolute;
+	font-family: 'Roboto Black';
+	font-weight: 400;
+	color:white;
+	font-size: 48px;
+	margin-top: 8%;
+	margin-left: 10%;
+	transform: skewX(-35grad);
 }
 
 .symbol8 {
-	margin-top: 35px;
-	margin-left: 1645px;
-	transform: skewY(-8grad);
 	position: absolute;
+	font-family: 'Roboto Black';
+	font-weight: 400;
+	color:white;
+	font-size: 48px;
+	margin-top: 1%;
+	margin-left: 75%;
+	transform: skewY(-8grad);
 }
 
 .symbol9 {
-	margin-top: 270px;
-	margin-left:1400px;
+	position: absolute;
+	font-family: 'Roboto Black';
+	font-weight: 400;
+	color:white;
+	margin-top: 9%;
+	margin-left:70%;
 	font-size: 35px;
 	transform: skewY(35grad);
-	position: absolute;
 }
 
 .symbol10 {
-	margin-top: 220px;
-	margin-left: 1730px;
-	transform: skewX(23grad);
 	position: absolute;
-	width: 70px;
+	font-family: 'Roboto Black';
+	font-weight: 400;
+	color:white;
+	font-size: 48px;
+	margin-top: 5%;
+	margin-left: 85%;
+	transform: skewX(23grad);
 }
 	
+@media (max-width: 1024px) {
+	.symbol6,
+	.symbol7,
+	.symbol8,
+	.symbol9,
+	.symbol10 {
+		display: none;
+	}	
+}
+
 .banner_text {
 	color: white;
 }	
@@ -854,7 +870,7 @@ span {
 }
 
 .social a {
-	background-image: url('img/sprite.png');
+	background-image: url('/img/sprite.png');
 	background-repeat: no-repeat;
 	height: 24px;
 	width: 24px;

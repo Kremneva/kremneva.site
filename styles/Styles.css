@@ -114,7 +114,7 @@ html {
 	.popup__feedback {
 		width: 290px !important;
 		height: 280px !important;
-	}	
+	}
 }
 
 .popup__top {
@@ -151,7 +151,7 @@ html {
 	font-size: 20px;
 }
 
-#popup__txt__name, 
+#popup__txt__name,
 #popup__txt__tel {
 	width: 70%;
 	height: 100%;
@@ -162,7 +162,7 @@ html {
 }
 
 @media (max-width: 500px) {
-	#popup__txt__name, 
+	#popup__txt__name,
 	#popup__txt__tel {
     width: 50%;
 	}
@@ -218,7 +218,7 @@ html {
 
 .header_nav ul li {
 	display: inline-block;
-	font-size: 16px;	
+	font-size: 16px;
 }
 
 .header_nav ul li a {
@@ -356,60 +356,59 @@ html {
 	animation: symbol5 1s;
 }
 
-@media (max-width: 1024px) {	
-	.symbol5 {	
+@media (max-width: 1024px) {
+	.symbol5 {
 		margin-top: 20%;
 	}
 }
 
 @media (max-width: 768px) {
-	.symbol1 {	
+	.symbol1 {
 		margin-top: 2%;
 		margin-left: 5%;
 	}
-	.symbol2 {	
+	.symbol2 {
 		margin-top: 15%;
 		margin-left: 7%;
-	}	
+	}
 	.symbol3 {
 		margin-top: 30%;
 		margin-left: 5%;
 	}
-	.symbol4 {	
+	.symbol4 {
 		margin-top: 2%;
 		margin-left: 43%;
 	}
-	.symbol5 {	
+	.symbol5 {
 		margin-top: 27%;
 		margin-left: 43%;
 	}
-} 
+}
 
 @media (max-width: 500px) {
 	.symbol1 {
-		font-size: 30px;	
+		font-size: 30px;
 		margin-top: 2%;
-		margin-left: 5%;	
+		margin-left: 5%;
 	}
-	.symbol2 {	
+	.symbol2 {
 		font-size: 40px;
 		margin-top: 37%;
 		margin-left: 7%;
-	}	
+	}
 	.symbol3 {
 		font-size: 30px;
 		margin-top: 70%;
 		margin-left: 5%;
 	}
-	.symbol4 {	
+	.symbol4 {
 		margin-top: 2%;
-		margin-left: 43%;	
+		margin-left: 43%;
 	}
-	.symbol5 {	
+	.symbol5 {
 		display: none;
 	}
 }
-
 
 @keyframes symbol1 {
 	from {transform:translate(150px, 150px);}
@@ -505,7 +504,7 @@ html {
 }
 
 @media (max-width: 1060px) {
-	.first_button {	
+	.first_button {
 		margin-bottom: 40px;
 	}
 }
@@ -527,7 +526,7 @@ html {
 		margin: 90px 100px;
 	}
 	.first_button1 {
-		padding-bottom: 40px;		
+		padding-bottom: 40px;
 	}
 }
 
@@ -548,7 +547,7 @@ html {
 	padding-top: 90px;
 	font-family: 'Roboto Black';
 	font-size: 55px;
-	text-align: center;	
+	text-align: center;
 }
 
 .services_items {
@@ -579,7 +578,7 @@ html {
 		display: inline-block;
 		width: 34%;
 		margin-bottom: 20px;
-	}	
+	}
 }
 
 @media (max-width: 600px) {
@@ -600,7 +599,7 @@ html {
 	text-align: center;
 }
 
-.services_button {	
+.services_button {
 	height: 60px;
 	width: 270px;
 	font-size: 16px;
@@ -614,7 +613,7 @@ html {
 @media (max-width: 576px) {
 	.services_button {
 		margin-top: 40px;
-	}	
+	}
 }
 
 .examples {
@@ -635,7 +634,7 @@ span {
     width: 60px;
 	height: 60px;
   }
-  
+
   .slide-arrow {
 	  position: absolute;
   }
@@ -651,7 +650,7 @@ span {
 	height: 60px;
 	border: none;
 	z-index: 40;
-} 
+}
 
 .arrow-next {
 	margin-top: -220px;
@@ -665,11 +664,11 @@ span {
    border: none;
    z-index: 40;
    transform: rotate(200grad);
-} 
+}
 
 .banner {
 	background: linear-gradient(to top right, #FF8F5A, #FF2F96);
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 .symbol6 {
@@ -727,7 +726,7 @@ span {
 	margin-left: 85%;
 	transform: skewX(23grad);
 }
-	
+
 @media (max-width: 1024px) {
 	.symbol6,
 	.symbol7,
@@ -735,12 +734,12 @@ span {
 	.symbol9,
 	.symbol10 {
 		display: none;
-	}	
+	}
 }
 
 .banner_text {
 	color: white;
-}	
+}
 
 .banner_text1 {
 	padding-left: 100px;
@@ -750,7 +749,7 @@ span {
 	font-family:'Roboto Black';
 	font-size: 48px;
 }
-	
+
 @media (max-width: 768px) {
 	.banner_text1 {
 		padding-top: 20px;
@@ -782,7 +781,7 @@ span {
 	font-size: 21px;
 	color: white;
 	}
-	
+
 @media (max-width:576px) {
 	.banner_text2 {
 		padding-left: 50px;
@@ -850,16 +849,16 @@ span {
     margin-bottom: 15px;
 }
 
-.footer_phone, 
+.footer_phone,
 .footer_mail {
-	font-size:20px; 
+	font-size:20px;
 	color:#FF2F96;
 	padding-right: 20px;
 	padding-bottom: 33px;
 }
 
-.footer_phone a, 
-.footer_mail a {	
+.footer_phone a,
+.footer_mail a {
 	font-size: 24px;
 	color: black;
 	padding-left: 20px;
@@ -877,7 +876,7 @@ span {
 	display: inline-block;
 	margin-right: 10px;
 }
-  
+
 .vk {background-position: 0 0;}
 
 .facebook {background-position: 0 -24px;}

@@ -9,13 +9,13 @@ $(function(){
       {
   $('html, body').off('mousewheel');
   }
-$('.header_button, .first_button, .services_button, .header__button__mobile').click(function(){
+$('.header_button, .first_button, .services_button, .header__button__mobile, .footer__button').click(function(){
    $('.popup__container, .popup__feedback').fadeIn(400, disableScroll);
    $('.popup__feedback').animate({
       width: '500px',
       height: '300px'
      }, 400)
-    }); 
+    });
 
     function closePopup() {
       $('.popup__container').fadeOut(400, enableScroll);
@@ -24,26 +24,26 @@ $('.header_button, .first_button, .services_button, .header__button__mobile').cl
           height: 0
       }, 400)
     }
-    
+
     $('.popup__container').click(function (event) {
-    
+
       if (event.target == this) {
           closePopup();
       }
     });
-    
+
     $(".close-btn").click(function () {
       closePopup()
     });
 
 $('.header__mobile').click(function(){
-    $('.popup__container1').fadeIn(400, disableScroll); 
+    $('.popup__container1').fadeIn(400, disableScroll);
     $('.popup__menu').animate({
        width: '200px',
        height: '200px'
       }, 400)
-     }); 
-     
+     });
+
 $('.popup__container1').click(function(event) {
      if(event.target == this) {
       $(this).fadeOut(400, enableScroll);
@@ -54,27 +54,23 @@ $('.popup__container1').click(function(event) {
     }
   });
 
- 
   $("#popup__txt__tel").mask("8(999) 999-9999", {
       completed: function(){ alert("Вы ввели номер: " + this.val()); }
   });
-  
- 
-  $('.send__form').click(function() {
-    var serializeFormData = $('#form').serialize();
+
+  $('.send__form').submit(function (event) {
+    event.preventDefault(); // Избавляемся от перенаправления по адресу action по умолчанию
+    var serializeFormData = $(this).serialize();
     $.ajax({
-      type: 'POST',
-      url: 'action',
-      data: serializeFormData,
-      success: function(data) {
-          console.log(data);
-      },
-      error:  function(data){
-          console.log('Внимание! произошла ошибка:' + data);
-      }
+        type: 'POST',
+        url: 'https://echo.htmlacademy.ru/',
+        data: serializeFormData,
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (data) {
+            console.log('Внимание! произошла ошибка:' + data);
+        }
     });
 });
-
-
-
 });

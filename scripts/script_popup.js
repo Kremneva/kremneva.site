@@ -54,11 +54,11 @@ $('.popup__container1').click(function(event) {
     }
   });
 
-  $("#popup__txt__tel").mask("8(999) 999-9999", {
-      completed: function(){ alert("Вы ввели номер: " + this.val()); }
-  });
+ 
 
-  $('.send__form').submit(function (event) {
+  $("#popup__txt__tel").mask("8(999) 999-9999");
+
+  $('#form').on('submit', (function (event) { // submit - это метод формы, не кнопки
     event.preventDefault(); // Избавляемся от перенаправления по адресу action по умолчанию
     var serializeFormData = $(this).serialize();
     $.ajax({
@@ -67,10 +67,15 @@ $('.popup__container1').click(function(event) {
         data: serializeFormData,
         success: function (data) {
             console.log(data);
+            alert ("Данные успешно отправлены!")
         },
         error: function (data) {
             console.log('Внимание! произошла ошибка:' + data);
         }
     });
+}));
+
+$(".send__form").click(function () {
+  closePopup()
 });
 });

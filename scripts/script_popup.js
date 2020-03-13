@@ -54,7 +54,9 @@ $('.popup__container1').click(function(event) {
     }
   });
 
- 
+  $("ul").click(function () {
+    $('.popup__container1').fadeOut(400, enableScroll);
+  });
 
   $("#popup__txt__tel").mask("8(999) 999-9999");
 

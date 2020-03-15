@@ -67,17 +67,16 @@ $('.popup__container1').click(function(event) {
         type: 'POST',
         url: 'https://echo.htmlacademy.ru/',
         data: serializeFormData,
-        success: function (data) {
-            console.log(data);
-            alert ("Данные успешно отправлены!")
+        success: function () {
+            $('#form').trigger('reset'); // Очищаем форму
+            closePopup(); // Закрываем попап
+            setTimeout(function () {
+                alert ("Данные успешно отправлены!")
+            }, 400)
         },
-        error: function (data) {
-            console.log('Внимание! произошла ошибка:' + data);
+        error: function (err) {
+            console.log('Внимание! произошла ошибка:' + err);
         }
     });
 }));
-
-$(".send__form").click(function () {
-  closePopup()
-});
 });

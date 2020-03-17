@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Дмитрий Алексеев Веб-разработчик</title>
+	<title>Дмитрий Алексеев-официальная страница</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -57,7 +57,9 @@
 			<button class="header__mobile"></button>
 		</div>
 		<div class="header_right p-2 bd-highlight">
-			<div class="header_tel">+7 (499) 995-55-77</div>
+			<div class="header_tel">
+				<a href="tel:+74999957755">+7 (499) 995-77-55</a>
+			</div>
 		</div>
 		<button class="header_button p-2 bd-highlight">Заказать звонок</button>
 		<button class="header__button__mobile"></button>
@@ -65,13 +67,16 @@
 </header>
 
 <section class="container__max">
-	<div class="symbol1">{ }</div>
-	<div class="symbol2">#</div>
-	<div class="symbol3">&lt;/&gt;</div>
-	<div class="symbol4">&lt;div&gt;</div>
-	<div class="symbol5">&lt;div&gt;</div>
+	<div class="flying__sumbols">
+		<div class="symbol1">{ }</div>
+		<div class="symbol2">#</div>
+		<div class="symbol3">&lt;/&gt;</div>
+		<div class="symbol4">&lt;div&gt;</div>
+		<div class="symbol5">&lt;div&gt;</div>
+	</div>
+
 	<div class="first">
-		<div class="first_left">
+		<div class="first_left ">
 			<h1 class="name">Дмитрий Алексеев</h1>
 			<h2 class="speciality">Frontend-разработчик и веб-верстальщик</h2>
 			<div class="first_button1"><button class="first_button">Узнать больше</button></div>
@@ -118,30 +123,42 @@
 		<div class="single-slide container">
 			<div class="slide_img">
 				<img src="img/Rectangle4.png" alt="">
-				<div class="slide_txt">Сайт психолога Веры Антоновой</div>
+				<div class="slide_txt">
+					<a href="#">Сайт психолога Веры Антоновой</a>
+				</div>
 			</div>
 			<div class="slide_img">
 				<img src="img/Rectangle41.png" alt="">
-				<div class="slide_txt">Интернет-магазин детской одежды</div>
+				<div class="slide_txt">
+					<a href="#">Интернет-магазин детской одежды</a>
+				</div>
 			</div>
 			<div class="slide_img">
 				<img src="img/Rectangle42.png" alt="">
-				<div class="slide_txt">Сайт магазина "Рыболов"</div>
+				<div class="slide_txt">
+					<a href="#">Сайт магазина "Рыболов"</a>
+				</div>
 			</div>
 			<div class="slide_img">
 				<img src="img/Rectangle4.png" alt="">
-				<div class="slide_txt">Сайт психолога Веры Антоновой</div>
+				<div class="slide_txt">
+					<a href="#">Сайт психолога Веры Антоновой</a>
+				</div>
 			</div>
 			<div class="slide_img">
 				<img src="img/Rectangle41.png" alt="">
-				<div class="slide_txt">Интернет-магазин детской одежды</div>
+				<div class="slide_txt">
+					<a href="#">Интернет-магазин детской одежды</a>
+				</div>
 			</div>
 			<div class="slide_img">
 				<img src="img/Rectangle42.png" alt="">
-				<div class="slide_txt">Сайт магазина "Рыболов"</div>
+				<div class="slide_txt">
+					<a href="#">Сайт магазина "Рыболов"</a>
+				</div>	
 			</div>
 	   </div>
-	   <div class="button">
+	   <div class="button1">
 		   <button class="services_button">Заказать проект</button>
 		</div>
 </section>
@@ -183,10 +200,28 @@
 				<button class="footer__button">Заказать звонок</button>
 			</div>
 			<address class="social">
-				<a href="https://vk.com" class="vk"></a>
-				<a href="https://www.facebook.com" class="facebook"></a>
-				<a href="https://www.twitch.tv" class="twitter"></a>
-				<a href="https://www.instagram.com" class="instagram"></a>
+				<div class="share-buttons">
+					<a class="share-btn-fb" href="http://www.facebook.com/">
+						<div class="facebook share-block">
+							<i class="fab fa-facebook" aria-hidden="true"></i>
+						</div>
+					</a>
+					<a href="https://plus.google.com/" target="_blank" onclick="return Share.me(this);">
+						<div class="google share-block">
+							<i class="fab fa-google-plus" aria-hidden="true"></i>
+						</div>
+					</a>
+					<a class="share-btn-vk" href="https://vk.com/" target="_blank" onclick="return Share.me(this);">
+						<div class="vk share-block">
+							<i class="fab fa-vk" aria-hidden="true"></i>
+						</div>
+					</a>
+					<a href="https://twitter.com/" target="_blank" onclick="return Share.me(this)">
+						<div class="twitter share-block">
+							<i class="fab fa-twitter" aria-hidden="true"></i>
+						</div>
+					</a>
+				</div>
 			</address>
 		</div>
 	</div>

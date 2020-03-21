@@ -79,15 +79,13 @@ $('.popup__container1').click(function(event) {
         }
     });
 }));
+
+  $('.header_nav a, .footer_nav a, .menu__item a').click((e) => {
+    e.preventDefault();
+    let href = $(e.currentTarget).attr('href');
+    let top = $(href).offset().top;
+    $('body, html').animate({
+      scrollTop: top,
+    }, 700);
+  });
 });
-
-Share = {
-  me : function(el){
-      Share.popup(el.href);
-      return false;
-  },
-
-  popup: function(url) {
-      window.open(url,'','toolbar=0,status=0,width=626,height=436');
-  }
-};

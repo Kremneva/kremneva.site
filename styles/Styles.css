@@ -212,7 +212,6 @@ a {
 .header_tel a:hover {
 	color:#F82370;
 	text-decoration: none;
-	border-bottom: 1px solid;
 
 }
 
@@ -326,6 +325,11 @@ a {
 	margin-bottom: 0rem !important;
 }
 
+.flying__symbol {
+
+}
+
+
 .symbol1 {
 	position: absolute;
 	font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
@@ -335,8 +339,9 @@ a {
 	font-weight: 800;
 	margin-top: 2%;
 	margin-left: 5%;
-	font-size: 50px;
-	animation: symbol1 1s;
+	font-size: 30px;
+	animation: symbol1 1.5s;
+	transform: rotate(20deg);
 }
 
 .symbol2 {
@@ -346,10 +351,11 @@ a {
     -webkit-background-clip: text;
 	color: transparent;
 	font-weight: 800;
-	font-size: 60px;
+	font-size: 30px;
 	margin-top: 15%;
 	margin-left: 2%;
-	animation: symbol2 1s;
+	animation: symbol2 1.5s;
+	transform: rotate(-30deg);
 }
 
 .symbol3 {
@@ -360,8 +366,8 @@ a {
 	color: transparent;font-weight: 800;
 	margin-top: 30%;
 	margin-left: 12%;
-	font-size: 50px;
-	animation: symbol3 1s;
+	font-size: 30px;
+	animation: symbol3 1.5s;
 }
 
 .symbol4 {
@@ -374,7 +380,8 @@ a {
 	margin-top: 2%;
 	margin-left: 43%;
 	font-size: 30px;
-	animation: symbol4 1s;
+	animation: symbol4 1.5s;
+	transform: rotate(-20deg);
 }
 
 .symbol5 {
@@ -386,8 +393,9 @@ a {
 	font-weight: 800;
 	margin-top: 25%;
 	margin-left: 55%;
-	font-size: 40px;
-	animation: symbol5 1s;
+	font-size: 30px;
+	animation: symbol5 1.5s;
+	transform: rotate(15deg);
 }
 
 @media (max-width: 1450px) {
@@ -490,24 +498,24 @@ a {
 
 
 @keyframes symbol1 {
-	from {transform:translate(150px, 150px);}
-	 to {transform:translate(0), skewX(-40grad);;}
+	0% {transform:translate(1000px, 400px) rotate(20deg);}
+	100% {transform:translate(0) rotate(20deg);}
 }
 @keyframes symbol2 {
-	from {transform:translate(0), skewY(27grad);}
-	 to {transform:translate(-150px, 250px);}
+	0% {transform:translate(1000px, 400px);}
+	100% {transform:translate(0) rotate(-30deg);}
 }
 @keyframes symbol3 {
-	from {transform:translate(0), skewY(-24grad);}
-	 to {transform:translate(-10px, 250px);}
+	0% {transform:translate(1000px, 200px);}
+	100% {transform:translate(0);}
 }
 @keyframes symbol4 {
-	from {transform:translate(0, 150px), skewY(-20grad);}
-	 to {transform:translate(250px, -20px);}
+	0% {transform:translate(1000px, 200px);}
+	100% {transform:translate(0)rotate(-20deg);}
 }
 @keyframes symbol5 {
-	from {transform:translate(0), skewY(20grad);}
-	 to {transform:translate(350px, 120px);}
+	0% {transform:translate(1000px, 200px);}
+	100% {transform:translate(0) rotate(15deg);}
 }
 
 .first {
@@ -786,7 +794,6 @@ img {
 .slide_txt a:hover {
 	color: #F82370;
 	text-decoration: none;
-	border-bottom: 1px solid;
 }
 
 span {
@@ -1101,7 +1108,6 @@ span {
 .footer_mail a:hover {
 	color: #FF2F96;
 	text-decoration: none;
-	border-bottom: 1px solid;
 }
 
 .fas{

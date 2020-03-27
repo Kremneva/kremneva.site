@@ -60,25 +60,70 @@ $('.popup__container1').click(function(event) {
 
   $("#popup__txt__tel").mask("8(999) 999-9999");
 
-  $('#form').on('submit', (function (event) { // submit - это метод формы, не кнопки
-    event.preventDefault(); // Избавляемся от перенаправления по адресу action по умолчанию
-    var serializeFormData = $(this).serialize();
-    $.ajax({
-        type: 'POST',
-        url: 'https://echo.htmlacademy.ru/',
-        data: serializeFormData,
-        success: function () {
-            $('#form').trigger('reset'); // Очищаем форму
-            closePopup(); // Закрываем попап
-            setTimeout(function () {
-                alert ("Данные успешно отправлены!")
-            }, 400)
+  $(document).ready(function(){
+    $('form').each(function () {
+      $(this).validate({
+        errorPlacement(error, element) {
+          return true;
         },
-        error: function (err) {
-            console.log('Внимание! произошла ошибка:' + err);
-        }
+        focusInvalid: false,
+        rules: {
+          Телефон: {
+            required: true,
+          },
+          Имя: {
+            required: true,
+          }
+        },
+        messages: {
+          Телефон: {
+            required: 'Нужно что-то ввести'
+          },
+          Имя: {
+            required: 'Нужно что-то ввести',
+          }
+        },
+
+
+        submitHandler(form) {
+        let th = $(form);
+
+        $.ajax({
+        type: 'POST',
+        url: 'mail.php',
+        data: th.serialize(),
+        // eslint-disable-next-line func-names
+      }).done(() => {
+
+        th.trigger('reset');
+        closePopup(); // Закрываем попап
+        setTimeout(function () {
+        alert ("Данные успешно отправлены!")
+       }, 400)
+      });
+
+      return false;
+      }
     });
-}));
+    });
+  });
+
+    // $.ajax({
+    //     type: 'POST',
+    //     url: 'https://echo.htmlacademy.ru/',
+    //     data: serializeFormData,
+    //     success: function () {
+    //         $('#form').trigger('reset'); // Очищаем форму
+    //         closePopup(); // Закрываем попап
+    //         setTimeout(function () {
+    //             alert ("Данные успешно отправлены!")
+    //         }, 400)
+    //     },
+    //     error: function (err) {
+    //         console.log('Внимание! произошла ошибка:' + err);
+    //     }
+    // });
+
 
   $('.header_nav a, .footer_nav a, .menu__item a').click((e) => {
     e.preventDefault();

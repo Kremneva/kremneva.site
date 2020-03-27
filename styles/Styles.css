@@ -1229,3 +1229,7 @@ a{
 .slick-dots li.slick-active button:before {
     color: #FF4E2E;
 }
+
+.error {
+	background-color: red !important;
+}

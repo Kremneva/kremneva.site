@@ -17,18 +17,25 @@
 <div class="popup__container">
 	<div class="popup__feedback">
 		<div class="popup__top d-flex justify-content-between">
-		<h2 class="popup__h2">Форма обратной связи</h2>
-		<div class="close-btn">&times;</div>
+			<div class="close-btn">&times;</div>
 		</div>
-			<form  id="form" action="https://echo.htmlacademy.ru/" method="post">
+			<h2 class="popup__h2">Форма обратной связи</h2>
+			<form  id="form">
+				<input type="hidden" name="project_name" value="Текст">
+				<input type="hidden" name="admin_email" value="yulia.nsk@gmail.com">
+				<input type="hidden" name="form_subject" value="Тема">
+
 				 <label for="popup__txt__name" class="popup__input">Ваше имя:</label>
-				 <input id="popup__txt__name" type="text" name="name" required>
+				 <input id="popup__txt__name" type="text" name="Имя" required>
 				<br><br>
 				<label for="popup__txt__tel" class="popup__input">Телефон:</label>
-				<input  id="popup__txt__tel" type="text" name="telephone" required>
+				<input  id="popup__txt__tel" type="text" name="Телефон" required>
 				<br><br>
-				<input type="submit" class="send__form" value="Отправить">
+				<button type="submit" class="send__form" value="Отправить">Отправить</button>
 			</form>
+
+
+
 	</div>
 </div>
 
@@ -219,6 +226,33 @@
 	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="slick/slick.min.js"></script>
-	<script src="scripts/jquery.maskedinput.min.js"></script>
+	<script src="scripts/jquery.maskedinput.min.js"></script>\
+	<script src="scripts/jquery.validate.min.js"></script>
+
+
+	<script>
+		// $(document).ready(function(){
+		// 	$('form').each(function () {
+		// 		$(this).validate({
+		// 			submitHandler(form) {
+		// 			let th = $(form);
+
+		// 			$.ajax({
+		// 			type: 'POST',
+		// 			url: 'mail.php',
+		// 			data: th.serialize(),
+		// 			// eslint-disable-next-line func-names
+		// 		}).done(() => {
+
+		// 			th.trigger('reset');
+		// 		});
+
+		// 		return false;
+		// 		}
+		// 	});
+		// 	});
+		// });
+
+</script>
 </body>
 </html>
